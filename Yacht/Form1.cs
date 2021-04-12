@@ -336,7 +336,7 @@ namespace Yacht
             label1.Text = "Left Rolls : 3";
 
             Score += int.Parse(l.Text);
-            label15.Text = "Score : " + Score.ToString();
+            
             if (isBonus)
             {
                 if (!Bonus)
@@ -346,11 +346,13 @@ namespace Yacht
                     if (BonusT >= 63)
                     {
                         label14.Text = "Bonus : Get!";
+                        Score += 30;
                         Bonus = true;
                     }
 
                 }
             }
+            label15.Text = "Score : " + Score.ToString();
             b = false;
             all_button_disable();
         }
